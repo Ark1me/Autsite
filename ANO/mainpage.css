@@ -1,0 +1,795 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', 'cursive';
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 110px;
+    background-color: #fff;
+}
+
+.left_wrapper {
+    width: 45%;
+}
+
+.left_wrapper .left_menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.left_wrapper .left_menu li,
+.left_menu li a {
+    cursor: pointer;
+    list-style: none;
+    text-decoration: none;
+    color: #000;
+    text-decoration: none;
+
+}
+
+.logo_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+}
+
+.logo_wrapper img {
+    margin: 0 auto;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.right_wrapper {
+    width: 45%;
+}
+
+.right_wrapper .contacts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.right_wrapper .contacts .contacts_info {
+    text-align: center;
+}
+
+.right_wrapper .contacts .contacts_info a {
+    text-decoration: none;
+    color: black;
+}
+
+.right_wrapper .contacts .social_links_wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.right_wrapper .contacts .social_links_wrapper .social_links_item {
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.social_links_item:hover {
+    transition: 0.3s;
+    transform: scale(1.2);
+}
+
+.language_change {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 35px;
+    height: 35px;
+}
+
+.language_change:hover {
+    transition: 0.3s;
+    background-color: #000;
+    color: #fff;
+    border-radius: 10px;
+}
+
+/* /Header */
+
+/* Modal window contacts */
+
+.modal_window_con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 300px;
+    height: 150px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 1px #000;
+    right: 20px;
+    top: 73%;
+    z-index: 100;
+    border-radius: 20px;
+}
+
+.modal_content_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+}
+
+.hide_window_content {
+    animation-name: hide;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hide {
+    from {
+        display: block;
+    }
+
+    to {
+        display: none;
+        opacity: 0;
+    }
+}
+
+.mini_window {
+    animation-name: transform;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    transition: 0.3s;
+}
+
+
+@keyframes transform {
+    from {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        position: fixed;
+        width: 300px;
+        height: 150px;
+        background-color: #fff;
+        box-shadow: 0 0 10px 1px #000;
+        right: 20px;
+        top: 73%;
+        z-index: 100;
+        border-radius: 20px;
+    }
+
+    25% {
+        opacity: 0.25;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    75% {
+        opacity: 0.75;
+    }
+
+    to {
+        position: fixed;
+        right: 20px;
+        top: 85%;
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        z-index: 101;
+        background-image: url(icons/phone2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        cursor: pointer;
+        box-shadow: 0 0 5px 1px #000;
+        opacity: 1;
+    }
+
+}
+
+.button {
+    width: 100%;
+    margin-top: 10px;
+    padding-right: 10px;
+}
+
+.button .bx-x {
+    float: right;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button .bx-x:hover {
+    transition: 0.3s;
+    color: #fff;
+    border-radius: 15px;
+    background-color: #000;
+}
+
+
+.modal_window_con hr {
+    width: 100%;
+    height: 1px;
+    background-color: #ffa3c3;
+    opacity: 0.5;
+}
+
+.modal_window .name,
+.message {
+    margin-top: 10px;
+    padding-bottom: 25px;
+}
+
+.modal_window_con .name {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.modal_window_con .message {
+    font-size: 13px;
+}
+
+.modal_window_con .phone_number {
+    font-size: 23px;
+    font-weight: bold;
+    padding-top: 15px;
+    margin-bottom: 10px;
+}
+
+
+
+/* /Modal window contacts */
+
+/* Arrow up */
+
+.bx-upvote {
+    background-color: #000;
+    top: 87.5%;
+    left: 20px;
+    border-radius: 10px;
+    position: fixed;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.bx-upvote:hover {
+    transition: 0.3s;
+    animation: 2s up infinite;
+}
+
+@keyframes up {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* /Arrow up */
+
+
+/* Leader section */
+
+.leader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://wallpaperaccess.com/full/2979509.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Background images */
+
+.morning {
+    background-image: url(https://images.hdqwalls.com/wallpapers/colorful-sunset-minimal-4k-0q.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.day {
+    background-image: url(https://free4kwallpapers.com/uploads/originals/2020/09/30/firewatch-sunny-day-wallpaper.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.evening {
+    background-image: url(https://images.hdqwalls.com/wallpapers/river-evening-digital-art-4k-ph.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.night {
+    background-image: url(https://wallpaperaccess.com/full/2979509.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* /Background image */
+
+.leader_info_container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 70%;
+    height: 75vh;
+    background-color: transparent;
+    margin: auto;
+    color: #fff;
+    font-weight: 600;
+}
+
+.leader_headers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 250px;
+}
+
+.leader_info_container h1 {
+    font-size: 30px;
+}
+
+.leader_info_container h3 {
+    font-size: 25px;
+}
+
+/* info button */
+
+.info_button {
+    position: relative;
+    width: 180px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: #ffa3c3;
+    border-color: transparent;
+    border: 0;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.25s;
+}
+
+.info_button:hover {
+    background-color: #bd778f;
+    transition: 0.25s;
+}
+
+.info_button .flare {
+    position: absolute;
+    top: 0;
+    bottom: 100;
+    width: 30px;
+    height: 150%;
+    transform: skew(30deg);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+    animation: flare 3s infinite linear;
+}
+
+@keyframes flare {
+    0% {
+        left: -150%
+    }
+
+    100% {
+        left: 400%
+    }
+}
+
+/* /info button */
+
+/* pointer arrow */
+
+.pointer-arrow {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 40px;
+}
+
+.pointer-arrow .arrow {
+    position: absolute;
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    height: 22px;
+    width: 22px;
+    transform: rotate(-45deg);
+    animation: arrow 2s infinite;
+}
+
+.arrow a {
+    width: 30px;
+    height: 30px;
+}
+
+@keyframes arrow {
+    0% {
+        bottom: 10px
+    }
+
+    50% {
+        bottom: 0px;
+    }
+
+    100% {
+        bottom: 10px;
+    }
+
+}
+
+/* /pointer arrow */
+
+/* /Leader section */
+
+/* Director section */
+
+.director_sec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    height: 1000px;
+    margin-bottom: -20px;
+}
+
+.information_wrapper {
+    position: relative;
+    width: 80%;
+    height: 800px;
+    background-color: transparent;
+}
+
+.about_director {
+    top: 25%;
+    left: 10%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    width: 500px;
+    height: 540px;
+    background-color: #8ff7b9;
+    border-radius: 30px;
+    padding: 20px 30px 0 30px;
+    z-index: 1;
+}
+
+.about_director_header {
+    font-size: 30px;
+}
+
+.line {
+    height: 3px;
+    width: 50px;
+    background-color: #ffa3c3;
+    margin-top: 20px;
+}
+
+.about_director_text {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.about_director_text li {
+    margin-left: 20px;
+    list-style-position: inside;
+}
+
+.about_director_button {
+    width: 180px;
+    height: 50px;
+    color: #000;
+    background-color: #ffa3c3;
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 30px;
+    margin-top: 10px;
+    border-color: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.about_director_button:hover {
+    border: 2px solid black;
+    transition: 0.5s;
+}
+
+.director_photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: absolute;
+    top: 2%;
+    right: 10%;
+    width: 412px;
+    height: 640px;
+    background-color: black;
+    border-radius: 30px;
+}
+
+.director_photo span {
+    font-size: 25px;
+    transform: rotate(-90deg);
+}
+
+
+/* /Director section */
+
+/* Servisec section */
+
+.services_sec {
+    position: relative;
+    width: 100%;
+    min-height: fit-content;
+}
+
+.services_header {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.services_list {
+    display: grid;
+    grid-template-columns: 560px 560px;
+    justify-content: center;
+    width: 90%;
+    height: 90%;
+    margin: 30px auto;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 540px;
+    height: 270px;
+    background-color: #000;
+    margin: 10px 10px;
+}
+
+.service_info_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 80%;
+    transition: 3s;
+}
+
+.service:hover .service_info_wrapper {
+    transition: 3s;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.service_info_wrapper .text {
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    transition: 0.1s;
+    transform: translateY(20px);
+}
+
+.service:hover .text {
+    transition: 0.3s;
+    transform: translateY(0);
+}
+
+.service:hover .more_information_button button {
+    opacity: 1;
+    transition: 0.3s;
+    transform: translateY(0);
+    border: 2px solid #000;
+}
+
+.service_info_wrapper .more_information_button button {
+    width: 140px;
+    height: 45px;
+    border-radius: 30px;
+    background-color: #ffa3c3;
+    font-size: 13px;
+    font-weight: 600;
+    opacity: 0;
+    transition: 0.1s;
+    transform: translateY(-30px);
+    cursor: pointer;
+}
+
+/* services modal window */
+
+
+.modal_window_background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 110vh;
+    opacity: 1;
+    transition: 1s;
+
+}
+
+.modal_window {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    padding: 20px 20px;
+    top: 35%;
+    left: 30%;
+    width: 600px;
+    height: 300px;
+    background-color: #fff;
+    transition: 1s;
+}
+
+.hide_window {
+    opacity: 0;
+    display: none;
+    transition: 1s;
+}
+
+.modal_window p {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+
+/* /Services section */
+
+/* Mail_form_section */
+
+.mail_form_sec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 85vh;
+    background-image: url(https://img.youscreen.ru/wall/14977556381291/14977556381291_1920x1200.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.email_form_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 560px;
+    height: 90%;
+    color: #fff;
+    text-align: center;
+}
+
+#email_form {
+    width: 100%;
+}
+
+.form_input {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 15px 0;
+}
+
+.form_input span {
+    float: right;
+}
+
+.form_input input {
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    border-color: transparent;
+    background-color: #fff;
+    outline: none;
+    padding: 10px;
+}
+
+.form_input textarea {
+    max-width: 560px;
+    min-width: 560px;
+    min-height: 70px;
+    max-height: 250px;
+    border-radius: 25px;
+    border-color: transparent;
+    outline: none;
+    padding: 10px;
+}
+
+.send_button {
+    position: relative;
+    width: 100%;
+    height: 56px;
+    background-color: #88cf97;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 30px;
+    margin-top: 10px;
+    border-color: transparent;
+    overflow-x: hidden;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.send-button:hover {
+
+    transition: 0.25s;
+}
+
+.flare {
+    position: absolute;
+    top: 0;
+    height: 100px;
+    width: 30px;
+    transform: skew(-30deg);
+    animation: flare2 3s infinite linear;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+}
+
+@keyframes flare2 {
+    0% {
+        left: -150%
+    }
+
+    100% {
+        left: 400%
+    }
+}
+
+
+/* Mail_form_section */
